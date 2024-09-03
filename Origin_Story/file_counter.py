@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Aug 31 15:51:34 2024
-
-@author: timho
+@author: timhockswender
 """
 import os
 from pathlib import Path
 import matplotlib.pyplot as plt
 
 # Define the base path as a Path object
-my_path = Path('C:\\Python_Stuff\\')
-#my_path =  Path('C:\\')
-
+#my_path = Path('C:\\Python_Stuff\\rrWork') #Testing only
+my_path =  Path('C:\\')#modify to suit your system
 def count_files(rootDir, extensions):
   """
   Counts the number of files with specific extensions in a directory and its subdirectories.
@@ -26,13 +24,13 @@ def count_files(rootDir, extensions):
     for file in files:
       if os.path.splitext(file)[1].lower() in extensions:
         file_counts[os.path.splitext(file)[1].lower()] += 1
-        #print(file)  
+        #optionally CAREFULLY add any other action, e.g. like print(file) 
   return file_counts
 
 #Let's try it:
 target_dir = my_path
 extensions = [".py",  ".jpg", ".pdf", ".ipynb" ,'.m', '.for','.f90', '.f', 'f03', 'cpp','h','.jmp','.jsl' 
-              ,'.xls', '.xlxs', '.for', '.f90','.bas'    ]  # Adjust extensions as needed
+              ,'.xls', '.xlsx', '.for', '.f90','.bas'    ]  # Adjust extensions as needed
 file_counts = count_files(target_dir, extensions)
 print(f"Here is file count by extension for {my_path}:")
 for ext, count in file_counts.items():
