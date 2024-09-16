@@ -1,0 +1,17 @@
+Details for Article - How I roll witha new environment
+conda create -c conda-forge -n chemistry1 python=3.12 #version number is optional
+conda activate chemistry1
+conda install numpy matplotlib
+conda install other project packages
+
+When your project is completed, abandoned or too frustrating then do:
+conda remove --name chemistry1 --all
+Essential items for Spyder:
+conda install ipykernel spyder-kernels -y
+
+Essential items for Jupyter Lab
+ipython kernel install --user --name=chemistry2
+Jupyter lab --notebook-dir="c:\python_stuff"
+After finishing with a Conda environment and deleting it:
+jupyter kernelspec uninstall unwanted-kernel
+Run 'jupyter kernelspec list' in your terminal before and after
