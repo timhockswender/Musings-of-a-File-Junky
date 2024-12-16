@@ -103,10 +103,8 @@ class Converter(tk.Tk):
         # do this prior to Frame creation
         self.style = ttk.Style(
             self
-        )  # set up for changing styles or widgets then define a few useful styles
-        # style some fonts
-        self.bold_button_font = ("Helvetica", 8, "bold")  # Define a custom font
-        self.instruction_text_font = ("Helvetica", 7, "bold")
+        )  
+    
         # style other tKinter/ttk widgets
         # relief options are: "flat", "raised", "sunken", "solid", "ridge", "groove"
         self.style.configure("Converter.TFrame", background="Sky Blue", relief="groove")
